@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = window.API_BASE_URL || 'https://time-tracker-backend-production-d3c3.up.railway.app';
 
 async function apiRequest(path, options = {}) {
   const url = `${API_BASE_URL}${path}`;
