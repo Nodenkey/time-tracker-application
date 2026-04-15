@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: #111827;
+  background-color: #f3f4f6;
+}
+
+.app-header {
+  padding: 1.5rem 1rem;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  color: #eff6ff;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+}
+
+.app-header .subtitle {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.app-main {
+  max-width: 960px;
+  margin: 1.5rem auto 2rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.08),
+    0 4px 6px -4px rgba(15, 23, 42, 0.06);
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.card-description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.required {
+  color: #dc2626;
+  margin-left: 0.15rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea {
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+  border-color: #2563eb;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.btn {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.btn.primary {
+  background-color: #2563eb;
+  color: #eff6ff;
+}
+
+.btn.primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn.secondary {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.btn.secondary:hover {
+  background-color: #d1d5db;
+}
+
+.btn.small {
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.btn.danger {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn.danger:hover {
+  background-color: #fecaca;
+}
+
+.field-error {
+  min-height: 1.1em;
+  font-size: 0.8rem;
+  color: #b91c1c;
+  margin-top: 0.15rem;
+}
+
+.form-status {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.form-status.error {
+  color: #b91c1c;
+}
+
+.form-status.success {
+  color: #15803d;
+}
+
+.info-banner,
+.error-banner {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.info-banner {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+.error-banner {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.entries-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.entries-table thead {
+  background-color: #f9fafb;
+}
+
+.entries-table th,
+.entries-table td {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.entries-table th.numeric,
+.entries-table td.numeric {
+  text-align: right;
+}
+
+.entries-table th.actions-col,
+.entries-table td.actions-col {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.entry-row:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.entry-row.editing {
+  background-color: #eef2ff;
+}
+
+.entry-activity {
+  max-width: 360px;
+}
+
+.empty-state {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.entries-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.entries-meta {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+@media (min-width: 640px) {
+  .form-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .form-field-full {
+    grid-column: span 3;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-main {
+    margin-top: 2rem;
+  }
+}
